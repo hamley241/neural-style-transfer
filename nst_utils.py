@@ -13,8 +13,8 @@ import numpy as np
 import tensorflow as tf
 
 class CONFIG:
-    IMAGE_WIDTH = 640
-    IMAGE_HEIGHT = 640
+    IMAGE_WIDTH = 500
+    IMAGE_HEIGHT = 500
     COLOR_CHANNELS = 3
     NOISE_RATIO = 0.6
     MEANS = np.array([123.68, 116.779, 103.939]).reshape((1,1,1,3)) 

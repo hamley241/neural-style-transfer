@@ -14,7 +14,7 @@ import tensorflow as tf
 
 class CONFIG:
     IMAGE_WIDTH = 500
-    IMAGE_HEIGHT = 500
+    IMAGE_HEIGHT = 300
     COLOR_CHANNELS = 3
     NOISE_RATIO = 0.6
     MEANS = np.array([123.68, 116.779, 103.939]).reshape((1,1,1,3)) 
@@ -152,6 +152,7 @@ def generate_noise_image(content_image, noise_ratio = CONFIG.NOISE_RATIO):
     """
     
     # Generate a random noise_image
+    print(" Image dimensions "+str(content_image.shape))
     noise_image = np.random.uniform(-20, 20, (1, content_image.shape[1], content_image.shape[2], CONFIG.COLOR_CHANNELS)).astype('float32')
     
     # Set the input_image to be a weighted average of the content_image and a noise_image
